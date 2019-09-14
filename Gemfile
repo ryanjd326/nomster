@@ -70,4 +70,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
-gem 'kaminari'
+#Gemfile for Rails 3+, Sinatra or Merb
+gem 'will_paginate', '~> 3.1.1'
