@@ -41,6 +41,7 @@
   </div>
 </div>
 
+
 <div class="clear"></div>
 
 
@@ -68,6 +69,8 @@
   </div>
 </div>
 
+<br />
+
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
   <!-- Button trigger modal -->
@@ -92,6 +95,7 @@
   <% end %>
 </div>
 
+
 <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -101,7 +105,7 @@
         </button>
         <h4 class="modal-title" id="myModalLabel">Add a Photo</h4>
       </div>
-    <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
         <div class="modal-body">
           <%= f.input :caption %>
           <%= f.input :picture %>
@@ -120,6 +124,12 @@
     <hr />
 
     <h2 class="float-left">Photos</h2>
+    <div class="col-10 offset-1">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
+          Add a Photo
+        </button>
+      </div>
     <br /><br class="clear">
     <div class="row col-10 offset-1">
 <% @place.photos.each do |photo| %>
